@@ -8,10 +8,20 @@ public class TresEnRaya {
 		
 		String x[][] = new String[3][3];
 		
+		for (int z = 0; z < x.length; z++) {
+			for(int h = 0; h < x[z].length; h++) {
+				
+				x[z][h] = "-";
+				System.out.print(x[z][h]);
+			}
+			System.out.println();
+		}
+		
 		int i = 9;
 		
+		Scanner posicion = new Scanner(System.in);
+		
 		while (i > 0) {
-			Scanner posicion = new Scanner(System.in);
 			System.out.println("Introduce una posicion: ");
 			int uno = posicion.nextInt();
 			System.out.println("Introduce una posicion: ");
@@ -21,8 +31,9 @@ public class TresEnRaya {
 				x[uno][dos] = "x";
 			}
 			else {
-				x[uno][dos] = "-";
+				x[uno][dos] = "o";
 			}
+			
 			
 			for (int z = 0; z < x.length; z++) {
 				for(int h = 0; h < x[z].length; h++) {
@@ -34,7 +45,7 @@ public class TresEnRaya {
 			i--;
 			System.out.println("\n");
 		}
-
+		posicion.close();
 	}
 
 }
